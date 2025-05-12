@@ -72,12 +72,18 @@ public class Utility {
         return randomDateTime.atOffset(ZoneOffset.UTC).format(DateTimeFormatter.ISO_INSTANT);
     }
 
+    public static String generateRandomHouseholdName() {
+        String[] adjectives = {"Happy", "Sunny", "Cozy", "Quiet", "Lovely"};
+        String[] nouns = {"Nest", "Home", "Household", "Place", "Residence"};
 
+        Random random = new Random();
 
+        String randomAdjective = adjectives[random.nextInt(adjectives.length)];
+        String randomNoun = nouns[random.nextInt(nouns.length)];
+        int randomNumber = 1000 + random.nextInt(9000); // Generates a number from 1000 to 9999
 
-
-
-
+        return randomAdjective + randomNoun + randomNumber;
+    }
 
 
     public static String getSingleJsonData(String jsonFilePath, String key) throws IOException, ParseException {
