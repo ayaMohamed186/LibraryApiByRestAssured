@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/API Projects/libraryApiRestAssured">
+        <classes>
+            <class name="testCases.TC01_CreateBook">
+                <methods>
+                    <include name="checkCreateNewBook_P"/>
+                </methods>
+            </class>
+            <class name="testCases.TC02_GetBookByID">
+                <methods>
+                    <include name="checkGetBookById_P"/>
+                </methods>
+            </class>
+            <class name="testCases.TC03_RetrieveAllBooks">
+                <methods>
+                    <include name="checkRetrieveAllBooks_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.TC04_UpdateBookById">
+                <methods>
+                    <include name="checkUpdateBookAdded_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.TC05_GetBookAfterUpdate">
+                <methods>
+                    <include name="checkGetBookByIdAfterUpdate_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.TC06_PartialUpdate">
+                <methods>
+                    <include name="checkPartialUpdate_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.TC07_DeleteBook">
+                <methods>
+                    <include name="checkDeleteBookById_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.TC08_GetBookAfterDelete">
+                <methods>
+                    <include name="checkGetBookAfterDelete_P"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
