@@ -1,9 +1,10 @@
-package testCases;
+package testCases.Book;
 
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.path.json.JsonPath;
+import testCases.TestBase;
 
 
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class TC03_RetrieveAllBooks extends TestBase{
+public class TC03_RetrieveAllBooks extends TestBase {
 
     @Test(priority = 1, description = "Get BooK details api by id")
     public void checkRetrieveAllBooks_P() {

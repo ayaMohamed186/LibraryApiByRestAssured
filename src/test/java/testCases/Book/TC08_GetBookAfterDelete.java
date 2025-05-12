@@ -1,27 +1,33 @@
-package testCases;
+package testCases.Book;
 
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
 
-public class TC07_DeleteBook extends TestBase {
+public class TC08_GetBookAfterDelete extends TestBase {
 
+    String responseBody;
     @Test(priority = 1, description = "check delete book by id ")
-    public void checkDeleteBookById_P() {
+    public void checkGetBookAfterDelete_P() {
         Response response =
                 given()
                         .auth().basic("admin", "admin")
                         .log().all().header("Content-Type", "application/json")
                         .header("g-token", "ROM831ESV")
                         .header("Authorization", "Basic YWRtaW46YWRtaW4=")
-                .when().delete("/books/" + bookID)
+                .when().get("/books/" + bookID)
                 .then()
                         .log().all()
-                        .assertThat().statusCode(204).extract().response();
+                        .assertThat().statusCode(404).extract().response();
 
         Assert.assertTrue(response.getTime() < 5000);
 
+        responseBody = response.getBody().asString();
+        Assert.assertTrue(responseBody.contains("Book not found"), "Expected message 'Book not found' but got: " + responseBody);
+
     }
+
 }

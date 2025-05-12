@@ -1,9 +1,10 @@
-package testCases;
+package testCases.Book;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
 import static model.CreateBookBody.getCreateBookBody;

@@ -1,12 +1,13 @@
-package testCases;
+package testCases.Book;
 
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
 
-public class TC02_GetBookByID extends TestBase{
+public class TC02_GetBookByID extends TestBase {
 
     String getResponseBookID,getResponseTitle,getResponseAuthor,getResponseIsbn,getResponseReleaseDate , dateFormatRegex;
 

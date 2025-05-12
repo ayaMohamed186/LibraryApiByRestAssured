@@ -6,8 +6,8 @@ import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 
-    static int bookID;
-    static String bookTitle,bookAuthor,bookIsbn,bookReleaseDate;
+    public static int bookID;
+    public static String bookTitle,bookAuthor,bookIsbn,bookReleaseDate;
 
     @BeforeTest
     public void setBaseURL(){

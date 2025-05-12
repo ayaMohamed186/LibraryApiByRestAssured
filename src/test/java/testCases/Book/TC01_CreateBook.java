@@ -1,4 +1,4 @@
-package testCases;
+package testCases.Book;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
