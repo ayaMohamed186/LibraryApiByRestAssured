@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 
 public class TC02_GetUserByID extends TestBase {
 
-    String getResponseFirstName,getResponseLastName,getResponseEmail,getResponseUserID, dateFormatRegex;
+    String getResponseFirstName,getResponseLastName,getResponseEmail,getResponseUserID;
 
     @Test(priority = 1, description = "Get user details api by id")
     public void checkGetBookById_P() {

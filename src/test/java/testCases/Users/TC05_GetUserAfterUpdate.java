@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 
 public class TC05_GetUserAfterUpdate extends TestBase {
 
-    String getResponseUserID, getResponseFirstName, getResponseLastName, getResponseEmail, dateFormatRegex;
+    String getResponseUserID, getResponseFirstName, getResponseLastName, getResponseEmail;
 
     @Test(priority = 1, description = "Get user details api by id")
     public void checkGetBookByIdAfterUpdate_P() {
@@ -27,9 +27,9 @@ public class TC05_GetUserAfterUpdate extends TestBase {
 
         // extract getUserDetailsAfterUpdate api response to use it in assertion
         getResponseUserID = response.jsonPath().getString("id");
-        getResponseFirstName = response.jsonPath().getString("title");
-        getResponseLastName = response.jsonPath().getString("author");
-        getResponseEmail = response.jsonPath().getString("isbn");
+        getResponseFirstName = response.jsonPath().getString("firstName");
+        getResponseLastName = response.jsonPath().getString("lastName");
+        getResponseEmail = response.jsonPath().getString("email");
 
 
         Assert.assertNotNull(response.jsonPath().getString("id"), "ID in response is null");

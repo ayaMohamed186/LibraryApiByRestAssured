@@ -8,11 +8,9 @@ import org.testng.annotations.Test;
 import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
-import static model.CreateBookBody.getCreateBookBody;
 import static util.Utility.*;
-import static util.Utility.generateRandomDate;
 
-public class TC12_UpdateHouseHold extends TestBase {
+public class TC04_UpdateHouseHold extends TestBase {
 
     String createdAt, updatedAt, dateFormatRegex;
 

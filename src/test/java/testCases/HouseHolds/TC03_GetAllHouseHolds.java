@@ -11,7 +11,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class TC11_GetAllHouseHolds extends TestBase {
+public class TC03_GetAllHouseHolds extends TestBase {
 
     @Test(priority = 1, description = "Get household details api by id")
     public void checkRetrieveAllBooks_P() {

@@ -7,22 +7,23 @@ import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
 
-public class TC15_DeleteHouseHold extends TestBase {
+public class TC08_GetHouseHoldAfterDelete extends TestBase {
 
-    @Test(priority = 1, description = "check delete houseHold by id ")
-    public void checkDeleteBookById_P() {
+    String responseBody;
+    @Test(priority = 1, description = "check delete household by id ")
+    public void checkGetBookAfterDelete_P() {
         Response response =
                 given()
                         .auth().basic("admin", "admin")
                         .log().all().header("Content-Type", "application/json")
                         .header("g-token", "ROM831ESV")
                         .header("Authorization", "Basic YWRtaW46YWRtaW4=")
-                .when().delete("/households/" + householdID)
+                .when().get("/households/" + householdID)
                 .then()
                         .log().all()
-                        .assertThat().statusCode(204).extract().response();
+                        .assertThat().statusCode(404).extract().response();
 
         Assert.assertTrue(response.getTime() < 5000);
-
     }
+
 }

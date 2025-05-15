@@ -7,7 +7,7 @@ import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
 
-public class TC10_GetHouseHoldById extends TestBase {
+public class TC02_GetHouseHoldById extends TestBase {
 
     String getResponseHouseHoldID,getResponseHouseHoldName ;
 

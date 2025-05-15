@@ -10,7 +10,7 @@ import testCases.TestBase;
 import static io.restassured.RestAssured.given;
 import static util.Utility.*;
 
-public class TC09_CreateHouseHold extends TestBase {
+public class TC01_CreateHouseHold extends TestBase {
 
     String createdAt, updatedAt, dateFormatRegex;
 

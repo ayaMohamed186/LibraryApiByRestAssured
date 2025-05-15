@@ -31,7 +31,7 @@
 <!--                </methods>-->
 <!--            </class>-->
 
-<!--            <class name="testCases.Book.TC06_PartialUpdate">-->
+<!--            <class name="testCases.Book.TC06_PartialUpdateForBook">-->
 <!--                <methods>-->
 <!--                    <include name="checkPartialUpdate_P"/>-->
 <!--                </methods>-->
@@ -50,14 +50,35 @@
 <!--            </class>-->
 
 
-            <class name="testCases.HouseHolds.TC09_CreateHouseHold"/>
-            <class name="testCases.HouseHolds.TC10_GetHouseHoldById"/>
-            <class name="testCases.HouseHolds.TC11_GetAllHouseHolds"/>
-            <class name="testCases.HouseHolds.TC12_UpdateHouseHold"/>
-            <class name="testCases.HouseHolds.TC13_GetHouseHoldAfterUpdate"/>
-            <class name="testCases.HouseHolds.TC14_PartialUpdateHouseHold"/>
-            <class name="testCases.HouseHolds.TC15_DeleteHouseHold"/>
-            <class name="testCases.HouseHolds.TC16_GetHouseHoldAfterDelete"/>
+<!--            <class name="testCases.HouseHolds.TC01_CreateHouseHold"/>-->
+<!--            <class name="testCases.HouseHolds.TC02_GetHouseHoldById"/>-->
+<!--            <class name="testCases.HouseHolds.TC03_GetAllHouseHolds"/>-->
+<!--            <class name="testCases.HouseHolds.TC04_UpdateHouseHold"/>-->
+<!--            <class name="testCases.HouseHolds.TC05_GetHouseHoldAfterUpdate"/>-->
+<!--            <class name="testCases.HouseHolds.TC06_PartialUpdateHouseHold"/>-->
+<!--            <class name="testCases.HouseHolds.TC07_DeleteHouseHold"/>-->
+<!--            <class name="testCases.HouseHolds.TC08_GetHouseHoldAfterDelete"/>-->
+
+
+<!--            <class name="testCases.Users.TC01_CreateUser"/>-->
+<!--            <class name="testCases.Users.TC02_GetUserByID"/>-->
+<!--            <class name="testCases.Users.TC03_RetrieveAllUsers"/>-->
+<!--            <class name="testCases.Users.TC04_UpdateUserById"/>-->
+<!--            <class name="testCases.Users.TC05_GetUserAfterUpdate"/>-->
+<!--            <class name="testCases.Users.TC06_PartialUpdateForUser"/>-->
+<!--            <class name="testCases.Users.TC07_DeleteUser"/>-->
+<!--            <class name="testCases.Users.TC08_GetUserAfterDelete"/>-->
+
+
+
+            <class name="testCases.WishLists.TC01_CreateWishList"/>
+            <class name="testCases.WishLists.TC02_GetWishListByID"/>
+            <class name="testCases.WishLists.TC03_RetrieveAllWishlists"/>
+            <class name="testCases.WishLists.TC04_UpdateWishListById"/>
+            <class name="testCases.WishLists.TC05_GetWishListAfterUpdate"/>
+            <class name="testCases.WishLists.TC06_PartialUpdateForWishList"/>
+            <class name="testCases.WishLists.TC07_DeleteWishList"/>
+            <class name="testCases.WishLists.TC08_GetWishListAfterDelete"/>
 
         </classes>
     </test>

@@ -1,8 +1,7 @@
-package testCases.HouseHolds;
+package testCases.Book;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
-import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testCases.TestBase;
@@ -10,33 +9,28 @@ import testCases.TestBase;
 import static io.restassured.RestAssured.given;
 import static model.CreateBookBody.getCreateBookBody;
 import static util.Utility.*;
+import static util.Utility.generateRandomDate;
 
-public class TC14_PartialUpdateHouseHold extends TestBase {
+public class TC06_PartialUpdateForBook extends TestBase {
 
     String title = bookTitle;
     String authorName = bookAuthor;
     String partialUpdateIsbn = generateRandomISBN();
     String partialUpdateReleaseDate = generateRandomDate();
-    String releaseDate, createdAt, updatedAt, dateFormatRegex;
-
 
     @Test(priority = 1, description = "check partial update api with valid data")
     public void checkPartialUpdate_P() {
-        JSONObject partialUpdateHouseHoldBody = new JSONObject();
-
-        partialUpdateHouseHoldBody.put("name" , generateRandomHouseholdName());
-
         Response response =
                 given()
                         .auth().basic("admin", "admin")
                         .log().all().header("Content-Type", "application/json")
                         .header("g-token", "ROM831ESV")
                         .header("Authorization", "Basic YWRtaW46YWRtaW4=")
-                        .body(partialUpdateHouseHoldBody.toJSONString())
+                        .body(getCreateBookBody(title, authorName, partialUpdateIsbn, partialUpdateReleaseDate))
 
-                .when().put("/households/" + householdID)
-                .then()
-                        .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema/createHouseHoldSchema.json"))
+                        .when().put("/books/" + bookID)
+                        .then()
+                        .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema/createBookSchema.json"))
                         .log().all().assertThat().statusCode(200).extract().response();
 
 
@@ -44,6 +38,5 @@ public class TC14_PartialUpdateHouseHold extends TestBase {
 
 
     }
-
 
 }

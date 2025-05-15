@@ -1,43 +1,52 @@
-package testCases.Users;
+package testCases.WishLists;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojo.createUserBody;
 import testCases.TestBase;
 
+import java.io.IOException;
+
 import static io.restassured.RestAssured.given;
 import static util.Utility.*;
 
-public class TC01_CreateUser extends TestBase {
+public class TC01_CreateWishList extends TestBase {
     String  createdAt ,updatedAt,dateFormatRegex;
+    String wishListName = getExcelData(0,0,"Sheet1");
+    String wishListBooks = generateRandomBookTitlesString(3);
+    String requestBody;
 
-    @Test(priority = 1, description = "Create user api with valid data")
+    public TC01_CreateWishList() throws IOException, ParseException {
+    }
+
+    @Test(priority = 1, description = "Create wishlist api with valid data")
     public void checkCreateNewBook_P() throws JsonProcessingException {
-        createUserBody createBody = new createUserBody();
-        createBody.setFirstName(generateRandomFirstName()).setLastName(generateRandomLastName()).setEmail(generateRandomEmail());
+        requestBody = "{\n" +
+                "  \"name\": \"" + wishListName + "\",\n" +
+                "  \"books\": \"" + wishListBooks + "\"\n" +
+                "}";
 
-        ObjectMapper mapper = new ObjectMapper();
         Response response =
                 given()
                         .log().all().header("Content-Type", "application/json")
                         .header("g-token", "ROM831ESV")
-                        .body(mapper.writeValueAsString(createBody))
+                        .body(requestBody)
 
-                .when().post("/users")
+                .when().post("/wishlists")
                 .then()
-                        .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema/createUserSchema.json"))
+                        .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema/createWishListSchema.json"))
                         .log().all().assertThat().statusCode(201).extract().response();
 
 
         Assert.assertTrue(response.getTime() < 5000);
 
-        Assert.assertEquals(response.jsonPath().getString("firstName"), createBody.getFirstName(), "Returned firstName does not match the request firstName");
-        Assert.assertEquals(response.jsonPath().getString("lastName"), createBody.getLastName(), "Returned lastName does not match the request lastName");
-        Assert.assertEquals(response.jsonPath().getString("email"), createBody.getEmail() , "Returned email does not match the request email");
+        Assert.assertEquals(response.jsonPath().getString("name"), wishListName, "Returned wishlist name does not match the request title");
+        Assert.assertEquals(response.jsonPath().getString("books"), wishListBooks , "Returned wishlist books does not match the request author");
 
 
         createdAt = response.jsonPath().getString("createdAt");
@@ -47,12 +56,11 @@ public class TC01_CreateUser extends TestBase {
         Assert.assertTrue(createdAt.matches(dateFormatRegex), "createdAt is not in valid format");
         Assert.assertTrue(updatedAt.matches(dateFormatRegex), "updatedAt is not in valid format");
 
-//
+
         // save response values to use it in next request
-        userID = response.jsonPath().getInt("id");
-        userFirstName = response.jsonPath().getString("firstName");
-        userLastName = response.jsonPath().getString("lastName");
-        userEmail = response.jsonPath().getString("email");
+        staticWishListID = response.jsonPath().getInt("id");
+        staticWishlistName = response.jsonPath().getString("name");
+        staticWishlistBooks = response.jsonPath().getString("books");
 
     }
 

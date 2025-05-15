@@ -7,7 +7,7 @@ import testCases.TestBase;
 
 import static io.restassured.RestAssured.given;
 
-public class TC13_GetHouseHoldAfterUpdate extends TestBase {
+public class TC05_GetHouseHoldAfterUpdate extends TestBase {
 
     String getResponseHouseHoldName, getResponseHouseHoldID, dateFormatRegex;
 

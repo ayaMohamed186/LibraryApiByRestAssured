@@ -86,7 +86,6 @@ public class Utility {
     }
 
 
-
     public static String generateRandomFirstName() {
         String[] namePrefixes = {"El", "Jo", "Ma", "Ka", "Lu"};
         String[] nameRoots = {"li", "hn", "ry", "na", "ra", "ia"};
@@ -128,6 +127,36 @@ public class Utility {
     }
 
 
+    public static String generateRandomBookTitlesString(int count) {
+        String[] adjectives = {
+                "Lost", "Invisible", "Chasing", "Silent", "Forgotten",
+                "Hidden", "Broken", "Burning", "Whispering", "Shattered"
+        };
+        String[] nouns = {
+                "Dreams", "Voices", "Horizons", "World", "City",
+                "Ashes", "Echoes", "Secrets", "Skies", "Memories"
+        };
+
+        Random random = new Random();
+        StringBuilder booksBuilder = new StringBuilder();
+        booksBuilder.append("[");
+
+        for (int i = 0; i < count; i++) {
+            // Generate a random title WITHOUT the random number for more natural titles
+            String randomAdjective = adjectives[random.nextInt(adjectives.length)];
+            String randomNoun = nouns[random.nextInt(nouns.length)];
+            String title = randomAdjective + " " + randomNoun;
+
+            booksBuilder.append(title);
+
+            if (i < count - 1) {
+                booksBuilder.append(",");
+            }
+        }
+
+        booksBuilder.append("]");
+        return booksBuilder.toString();
+    }
 
 
     public static String getSingleJsonData(String jsonFilePath, String key) throws IOException, ParseException {
