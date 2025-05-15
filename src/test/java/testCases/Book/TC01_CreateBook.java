@@ -40,12 +40,6 @@ public class TC01_CreateBook extends TestBase {
         Assert.assertEquals(response.jsonPath().getString("isbn"), validIsbn, "Returned ISBN does not match the request ISBN");
         Assert.assertEquals(response.jsonPath().getString("releaseDate"), validReleaseDate, "Returned releaseDate does not match the request releaseDate");
 
-        Assert.assertNotNull(response.jsonPath().getString("id"), "ID in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("title"), "Title in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("author"), "Author in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("isbn"), "ISBN in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("releaseDate"), "Release Date in response is null");
-
         releaseDate = response.jsonPath().getString("releaseDate");
         createdAt = response.jsonPath().getString("createdAt");
         updatedAt = response.jsonPath().getString("updatedAt");

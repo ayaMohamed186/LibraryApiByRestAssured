@@ -43,7 +43,7 @@ public class TC05_GetBookAfterUpdate extends TestBase {
         Assert.assertTrue(getResponseUpdatedReleaseDate.matches(dateFormatRegex), "releaseDate is not in valid format");
 
 
-        // compare getBookingDetails api response WITH values extracted from CreateBookApi
+        // compare getBookingDetails api response WITH values extracted from updateBookApi
         Assert.assertEquals(getResponseBookID, String.valueOf(bookID), "Book ID does not match");
         Assert.assertEquals(getResponseUpdatedTitle, bookTitle, "Title does not match");
         Assert.assertEquals(getResponseUpdatedAuthor, bookAuthor, "Author does not match");

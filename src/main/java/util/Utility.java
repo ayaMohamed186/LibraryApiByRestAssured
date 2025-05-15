@@ -86,6 +86,50 @@ public class Utility {
     }
 
 
+
+    public static String generateRandomFirstName() {
+        String[] namePrefixes = {"El", "Jo", "Ma", "Ka", "Lu"};
+        String[] nameRoots = {"li", "hn", "ry", "na", "ra", "ia"};
+
+        Random random = new Random();
+
+        String prefix = namePrefixes[random.nextInt(namePrefixes.length)];
+        String root = nameRoots[random.nextInt(nameRoots.length)];
+        int number = 1 + random.nextInt(99); // Random number from 1 to 99
+
+        return prefix + root + number;
+    }
+
+
+    public static String generateRandomLastName() {
+        String[] namePrefixes = {"Mc", "Van", "De", "O'", "Fitz"};
+        String[] nameRoots = {"Donald", "Smith", "Johnson", "Brown", "Taylor", "Miller", "Clark"};
+
+        Random random = new Random();
+
+        String prefix = namePrefixes[random.nextInt(namePrefixes.length)];
+        String root = nameRoots[random.nextInt(nameRoots.length)];
+        int number = 100 + random.nextInt(900); // Random 3-digit number
+
+        return prefix + root + number;
+    }
+
+    public static String generateRandomEmail() {
+        String[] userPrefixes = {"user", "mail", "contact", "info", "hello"};
+        String[] domains = {"example.com", "mail.com", "test.org", "demo.net", "inbox.io"};
+
+        Random random = new Random();
+
+        String prefix = userPrefixes[random.nextInt(userPrefixes.length)];
+        int number = 1000 + random.nextInt(9000); // Random number from 1000 to 9999
+        String domain = domains[random.nextInt(domains.length)];
+
+        return prefix + number + "@" + domain;
+    }
+
+
+
+
     public static String getSingleJsonData(String jsonFilePath, String key) throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
 

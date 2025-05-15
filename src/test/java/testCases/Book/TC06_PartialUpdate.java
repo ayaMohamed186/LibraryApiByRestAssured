@@ -17,8 +17,6 @@ public class TC06_PartialUpdate extends TestBase {
     String authorName = bookAuthor;
     String partialUpdateIsbn = generateRandomISBN();
     String partialUpdateReleaseDate = generateRandomDate();
-    String releaseDate, createdAt, updatedAt, dateFormatRegex;
-
 
     @Test(priority = 1, description = "check partial update api with valid data")
     public void checkPartialUpdate_P() {

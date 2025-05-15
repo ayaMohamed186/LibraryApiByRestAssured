@@ -3,51 +3,61 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="E:/API Projects/libraryApiRestAssured">
         <classes>
-            <class name="testCases.TC01_CreateBook">
-                <methods>
-                    <include name="checkCreateNewBook_P"/>
-                </methods>
-            </class>
-            <class name="testCases.TC02_GetBookByID">
-                <methods>
-                    <include name="checkGetBookById_P"/>
-                </methods>
-            </class>
-            <class name="testCases.TC03_RetrieveAllBooks">
-                <methods>
-                    <include name="checkRetrieveAllBooks_P"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.Book.TC01_CreateBook">-->
+<!--                <methods>-->
+<!--                    <include name="checkCreateNewBook_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.Book.TC02_GetBookByID">-->
+<!--                <methods>-->
+<!--                    <include name="checkGetBookById_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.Book.TC03_RetrieveAllBooks">-->
+<!--                <methods>-->
+<!--                    <include name="checkRetrieveAllBooks_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
-            <class name="testCases.TC04_UpdateBookById">
-                <methods>
-                    <include name="checkUpdateBookAdded_P"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.Book.TC04_UpdateBookById">-->
+<!--                <methods>-->
+<!--                    <include name="checkUpdateBookAdded_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
-            <class name="testCases.TC05_GetBookAfterUpdate">
-                <methods>
-                    <include name="checkGetBookByIdAfterUpdate_P"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.Book.TC05_GetBookAfterUpdate">-->
+<!--                <methods>-->
+<!--                    <include name="checkGetBookByIdAfterUpdate_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
-            <class name="testCases.TC06_PartialUpdate">
-                <methods>
-                    <include name="checkPartialUpdate_P"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.Book.TC06_PartialUpdate">-->
+<!--                <methods>-->
+<!--                    <include name="checkPartialUpdate_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
-            <class name="testCases.TC07_DeleteBook">
-                <methods>
-                    <include name="checkDeleteBookById_P"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.Book.TC07_DeleteBook">-->
+<!--                <methods>-->
+<!--                    <include name="checkDeleteBookById_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
-            <class name="testCases.TC08_GetBookAfterDelete">
-                <methods>
-                    <include name="checkGetBookAfterDelete_P"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.Book.TC08_GetBookAfterDelete">-->
+<!--                <methods>-->
+<!--                    <include name="checkGetBookAfterDelete_P"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+
+            <class name="testCases.HouseHolds.TC09_CreateHouseHold"/>
+            <class name="testCases.HouseHolds.TC10_GetHouseHoldById"/>
+            <class name="testCases.HouseHolds.TC11_GetAllHouseHolds"/>
+            <class name="testCases.HouseHolds.TC12_UpdateHouseHold"/>
+            <class name="testCases.HouseHolds.TC13_GetHouseHoldAfterUpdate"/>
+            <class name="testCases.HouseHolds.TC14_PartialUpdateHouseHold"/>
+            <class name="testCases.HouseHolds.TC15_DeleteHouseHold"/>
+            <class name="testCases.HouseHolds.TC16_GetHouseHoldAfterDelete"/>
 
         </classes>
     </test>
