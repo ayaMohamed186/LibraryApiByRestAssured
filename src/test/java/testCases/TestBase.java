@@ -1,9 +1,12 @@
 package testCases;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 
+@Listeners(ChainTestListener.class)
 public class TestBase {
 
     public static int bookID,householdID, userID,staticWishListID;
