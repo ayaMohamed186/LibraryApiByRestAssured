@@ -11,7 +11,7 @@ import static model.CreateBookBody.getCreateBookBody;
 import static util.Utility.*;
 import static util.Utility.generateRandomDate;
 
-public class TC06_PartialUpdateForBook extends TestBase {
+public class TC04_PartialUpdateForBook extends TestBase {
 
     String title = bookTitle;
     String authorName = bookAuthor;

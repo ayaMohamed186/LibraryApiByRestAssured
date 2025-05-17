@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="E:/API Projects/libraryApiRestAssured">
-        <classes>
-            <class name="testCases.Book.TC01_CreateBook"/>
-            <class name="testCases.Book.TC02_GetBookByID"/>
-            <class name="testCases.Book.TC03_RetrieveAllBooks"/>
-            <class name="testCases.Book.TC04_UpdateBookById"/>
-            <class name="testCases.Book.TC05_GetBookAfterUpdate"/>
-            <class name="testCases.Book.TC06_PartialUpdateForBook"/>
-            <class name="testCases.Book.TC07_DeleteBook"/>
-            <class name="testCases.Book.TC08_GetBookAfterDelete"/>
-
-            <class name="testCases.HouseHolds.TC01_CreateHouseHold"/>
-            <class name="testCases.HouseHolds.TC02_GetHouseHoldById"/>
-            <class name="testCases.HouseHolds.TC03_GetAllHouseHolds"/>
-            <class name="testCases.HouseHolds.TC04_UpdateHouseHold"/>
-            <class name="testCases.HouseHolds.TC05_GetHouseHoldAfterUpdate"/>
-            <class name="testCases.HouseHolds.TC06_PartialUpdateHouseHold"/>
-            <class name="testCases.HouseHolds.TC07_DeleteHouseHold"/>
-            <class name="testCases.HouseHolds.TC08_GetHouseHoldAfterDelete"/>
-
-            <class name="testCases.Users.TC01_CreateUser"/>
-            <class name="testCases.Users.TC02_GetUserByID"/>
-            <class name="testCases.Users.TC03_RetrieveAllUsers"/>
-            <class name="testCases.Users.TC04_UpdateUserById"/>
-            <class name="testCases.Users.TC05_GetUserAfterUpdate"/>
-            <class name="testCases.Users.TC06_PartialUpdateForUser"/>
-            <class name="testCases.Users.TC07_DeleteUser"/>
-            <class name="testCases.Users.TC08_GetUserAfterDelete"/>
-
-            <class name="testCases.WishLists.TC01_CreateWishList"/>
-            <class name="testCases.WishLists.TC02_GetWishListByID"/>
-            <class name="testCases.WishLists.TC03_RetrieveAllWishlists"/>
-            <class name="testCases.WishLists.TC04_UpdateWishListById"/>
-            <class name="testCases.WishLists.TC05_GetWishListAfterUpdate"/>
-            <class name="testCases.WishLists.TC06_PartialUpdateForWishList"/>
-            <class name="testCases.WishLists.TC07_DeleteWishList"/>
-            <class name="testCases.WishLists.TC08_GetWishListAfterDelete"/>
-
-        </classes>
-    </test>
+    <suite-files>
+        <suite-file path="bookSprint.xml"/>
+    </suite-files>
 </suite>
