@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Tests for Books">
+<suite name="All Tests for HouseHold">
 
     <test verbose="2" preserve-order="true" name="E2E HouseHold APIs">
         <classes>
