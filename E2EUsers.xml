@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests for Books">
+
+    <test verbose="2" preserve-order="true" name="E2E User APIs">
+        <classes>
+            <class name="testCases.Users.TC01_CreateUser">
+                <methods>
+                    <include name="checkCreateNewUser_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.Users.TC02_GetUser">
+                <methods>
+                    <include name="checkGetUserById_P"/>
+                    <include name="checkGetUserAfterUpdate_P"/>
+                    <include name="checkRetrieveAllUsers_P"/>
+                    <include name="checkGetUserAfterDelete_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.Users.TC03_UpdateUserById">
+                <methods>
+                    <include name="checkUpdateUserAdded_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.Users.TC04_PartialUpdateForUser">
+                <methods>
+                    <include name="checkPartialUpdate_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.Users.TC05_DeleteUser">
+                <methods>
+                    <include name="checkDeleteUserById_P"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

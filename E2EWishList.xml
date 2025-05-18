@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests for Books">
+
+    <test verbose="2" preserve-order="true" name="E2E WishList APIs">
+        <classes>
+            <class name="testCases.WishLists.TC01_CreateWishList">
+                <methods>
+                    <include name="checkCreateNewWishList_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.WishLists.TC02_GetWishListByID">
+                <methods>
+                    <include name="checkGetWishListById_P"/>
+                    <include name="checkGetWishListAfterUpdate_P"/>
+                    <include name="checkRetrieveAllWishList_P"/>
+                    <include name="checkGetWishListAfterDelete_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.WishLists.TC03_UpdateWishListById">
+                <methods>
+                    <include name="checkUpdateWishListAdded_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.WishLists.TC04_PartialUpdateForWishList">
+                <methods>
+                    <include name="checkPartialUpdate_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.WishLists.TC05_DeleteWishList">
+                <methods>
+                    <include name="checkDeleteWishListById_P"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

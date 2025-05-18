@@ -25,7 +25,7 @@ public class TC01_CreateWishList extends TestBase {
     }
 
     @Test(priority = 1, description = "Create wishlist api with valid data")
-    public void checkCreateNewBook_P() throws JsonProcessingException {
+    public void checkCreateNewWishList_P() throws JsonProcessingException {
         requestBody = "{\n" +
                 "  \"name\": \"" + wishListName + "\",\n" +
                 "  \"books\": \"" + wishListBooks + "\"\n" +

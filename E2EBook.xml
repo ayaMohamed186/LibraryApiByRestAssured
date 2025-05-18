@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests for Books">
+
+    <test verbose="2" preserve-order="true" name="E2E Book APIs">
+        <classes>
+            <class name="testCases.Book.TC01_CreateBook">
+                <methods>
+                    <include name="checkCreateNewBook_P"/>
+                </methods>
+            </class>
+            <class name="testCases.Book.TC02_GetBook">
+                <methods>
+                    <include name="checkGetBookById_P"/>
+                    <include name="checkGetBookByIdAfterUpdate_P"/>
+                    <include name="checkRetrieveAllBooks_P"/>
+                    <include name="checkGetBookAfterDelete_P"/>
+                </methods>
+            </class>
+            <class name="testCases.Book.TC03_UpdateBookById">
+                <methods>
+                    <include name="checkUpdateBookAdded_P"/>
+                </methods>
+            </class>
+            <class name="testCases.Book.TC04_PartialUpdateForBook">
+                <methods>
+                    <include name="checkPartialUpdate_P"/>
+                </methods>
+            </class>
+            <class name="testCases.Book.TC05_DeleteBook">
+                <methods>
+                    <include name="checkDeleteBookById_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

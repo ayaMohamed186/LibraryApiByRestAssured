@@ -16,7 +16,7 @@ public class TC01_CreateUser extends TestBase {
     String  createdAt ,updatedAt,dateFormatRegex;
 
     @Test(priority = 1, description = "Create user api with valid data")
-    public void checkCreateNewBook_P() throws JsonProcessingException {
+    public void checkCreateNewUser_P() throws JsonProcessingException {
         createUserBody createBody = new createUserBody();
         createBody.setFirstName(generateRandomFirstName()).setLastName(generateRandomLastName()).setEmail(generateRandomEmail());
 

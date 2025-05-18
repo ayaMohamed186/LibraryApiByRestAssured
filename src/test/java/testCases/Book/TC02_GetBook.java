@@ -13,50 +13,20 @@ import static io.restassured.RestAssured.given;
 
 public class TC02_GetBook extends TestBase {
 
-    String getResponseBookID,getResponseTitle,getResponseAuthor,getResponseIsbn,getResponseReleaseDate , dateFormatRegex;
     String responseBody;
+    String id,title,author,isbn,releaseDate;
 
-    @Test(priority = 1, description = "Get BooK details api by id")
+    @Test(priority = 1, description = "Get Book details API by ID", dependsOnMethods = {"checkCreateNewBook_P"})
     public void checkGetBookById_P() {
-        Response response =
-        given()
-                .log().all().header("Content-Type","application/json")
-                .header("g-token", "ROM831ESV")
-        .when().get("/books/"+bookID)
-        .then()
-                .log().all()
-                .assertThat().statusCode(200).extract().response();
-
-        Assert.assertTrue(response.getTime() < 5000);
-
-        // extract getBookDetails api response to use it in assertion
-        getResponseBookID = response.jsonPath().getString("id");
-        getResponseTitle = response.jsonPath().getString("title");
-        getResponseAuthor = response.jsonPath().getString("author");
-        getResponseIsbn = response.jsonPath().getString("isbn");
-        getResponseReleaseDate = response.jsonPath().getString("releaseDate");
-
-
-        Assert.assertNotNull(response.jsonPath().getString("id"), "ID in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("title"), "Title in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("author"), "Author in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("isbn"), "ISBN in response is null");
-        Assert.assertNotNull(response.jsonPath().getString("releaseDate"), "Release Date in response is null");
-
-        dateFormatRegex = "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$";
-        Assert.assertTrue(getResponseReleaseDate.matches(dateFormatRegex), "releaseDate is not in valid format");
-
-
-        // compare getBookingDetails api response WITH values extracted from CreateBookApi
-        Assert.assertEquals(getResponseBookID, String.valueOf(bookID), "Book ID does not match");
-        Assert.assertEquals(getResponseTitle, bookTitle, "Title does not match");
-        Assert.assertEquals(getResponseAuthor, bookAuthor, "Author does not match");
-        Assert.assertEquals(getResponseIsbn, bookIsbn, "ISBN does not match");
-        Assert.assertEquals(getResponseReleaseDate, bookReleaseDate, "Release Date does not match");
-
+        validateBookDetails(bookTitle, bookAuthor, bookIsbn, bookReleaseDate);
     }
 
-    @Test(priority = 2 , description = "Get BooK details api by id")
+    @Test(priority = 2, description = "Get Book details API by ID", dependsOnMethods = {"checkUpdateBookAdded_P"})
+    public void checkGetBookByIdAfterUpdate_P() {
+        validateBookDetails(bookTitle, bookAuthor, bookIsbn, bookReleaseDate);
+    }
+
+    @Test(priority = 3 , description = "Get BooK details api by id" , dependsOnMethods = {"checkPartialUpdate_P"})
     public void checkRetrieveAllBooks_P() {
         Response response =
                 given()
@@ -102,7 +72,7 @@ public class TC02_GetBook extends TestBase {
         Assert.assertTrue(firstBook.get("updatedAt") instanceof String, "'updatedAt' is not a string");
     }
 
-    @Test(priority = 2, description = "check delete book by id ")
+    @Test(priority = 4, description = "check delete book by id " , dependsOnMethods = "checkDeleteBookById_P")
     public void checkGetBookAfterDelete_P() {
         Response response =
                 given()
@@ -121,6 +91,43 @@ public class TC02_GetBook extends TestBase {
         Assert.assertTrue(responseBody.contains("Book not found"), "Expected message 'Book not found' but got: " + responseBody);
 
     }
+
+
+    private void validateBookDetails(String expectedTitle, String expectedAuthor, String expectedIsbn, String expectedReleaseDate) {
+        Response response =
+                given()
+                        .log().all().header("Content-Type", "application/json")
+                        .header("g-token", "ROM831ESV")
+                        .when().get("/books/" + bookID)
+                        .then()
+                        .log().all()
+                        .assertThat().statusCode(200).extract().response();
+
+        Assert.assertTrue(response.getTime() < 5000);
+
+         id = response.jsonPath().getString("id");
+         title = response.jsonPath().getString("title");
+         author = response.jsonPath().getString("author");
+         isbn = response.jsonPath().getString("isbn");
+         releaseDate = response.jsonPath().getString("releaseDate");
+
+        Assert.assertNotNull(id, "ID in response is null");
+        Assert.assertNotNull(title, "Title in response is null");
+        Assert.assertNotNull(author, "Author in response is null");
+        Assert.assertNotNull(isbn, "ISBN in response is null");
+        Assert.assertNotNull(releaseDate, "Release Date in response is null");
+
+        String dateFormatRegex = "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$";
+        Assert.assertTrue(releaseDate.matches(dateFormatRegex), "releaseDate is not in valid format");
+
+        Assert.assertEquals(id, String.valueOf(bookID), "Book ID does not match");
+        Assert.assertEquals(title, expectedTitle, "Title does not match");
+        Assert.assertEquals(author, expectedAuthor, "Author does not match");
+        Assert.assertEquals(isbn, expectedIsbn, "ISBN does not match");
+        Assert.assertEquals(releaseDate, expectedReleaseDate, "Release Date does not match");
+    }
+
+
 
 
 }

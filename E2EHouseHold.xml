@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests for Books">
+
+    <test verbose="2" preserve-order="true" name="E2E HouseHold APIs">
+        <classes>
+            <class name="testCases.HouseHolds.TC01_CreateHouseHold">
+                <methods>
+                    <include name="checkCreateNewHouseHold_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.HouseHolds.TC02_GetHouseHold">
+                <methods>
+                    <include name="checkGetHouseHoldById_P"/>
+                    <include name="checkGetHouseHoldAfterUpdate_P"/>
+                    <include name="checkRetrieveAllHouseHold_P"/>
+                    <include name="checkGetHouseHoldAfterDelete_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.HouseHolds.TC03_UpdateHouseHold">
+                <methods>
+                    <include name="checkUpdateHouseHoldAdded_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.HouseHolds.TC04_PartialUpdateHouseHold">
+                <methods>
+                    <include name="checkPartialUpdate_P"/>
+                </methods>
+            </class>
+
+            <class name="testCases.HouseHolds.TC05_DeleteHouseHold">
+                <methods>
+                    <include name="checkDeleteHouseHoldById_P"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

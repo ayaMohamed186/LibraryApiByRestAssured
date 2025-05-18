@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <suite-files>
-        <suite-file path="bookSprint.xml"/>
+        <suite-file path="E2EBook.xml"/>
+        <suite-file path="E2EHouseHold.xml"/>
+        <suite-file path="E2EUsers.xml"/>
+        <suite-file path="E2EWishList.xml"/>
     </suite-files>
 </suite>
