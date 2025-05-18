@@ -2,6 +2,8 @@ package testCases.WishLists;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.json.simple.parser.ParseException;
@@ -23,8 +25,8 @@ public class TC01_CreateWishList extends TestBase {
 
     public TC01_CreateWishList() throws IOException, ParseException {
     }
-
     @Test(priority = 1, description = "Create wishlist api with valid data")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkCreateNewWishList_P() throws JsonProcessingException {
         requestBody = "{\n" +
                 "  \"name\": \"" + wishListName + "\",\n" +

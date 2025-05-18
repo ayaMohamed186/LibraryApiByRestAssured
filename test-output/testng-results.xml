@@ -2,212 +2,212 @@
 <testng-results ignored="0" total="32" passed="32" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-18T22:05:29 EEST" name="All Tests for Books" finished-at="2025-05-18T22:05:38 EEST" duration-ms="8786">
+  <suite started-at="2025-05-18T22:16:23 EEST" name="All Tests for Books" finished-at="2025-05-18T22:16:31 EEST" duration-ms="8326">
     <groups>
     </groups>
-    <test started-at="2025-05-18T22:05:29 EEST" name="E2E Book APIs" finished-at="2025-05-18T22:05:38 EEST" duration-ms="8786">
+    <test started-at="2025-05-18T22:16:23 EEST" name="E2E Book APIs" finished-at="2025-05-18T22:16:31 EEST" duration-ms="8326">
       <class name="testCases.Book.TC03_UpdateBookById">
-        <test-method signature="checkUpdateBookAdded_P()[pri:1, instance:testCases.Book.TC03_UpdateBookById@67a056f1]" started-at="2025-05-18T22:05:37 EEST" name="checkUpdateBookAdded_P" description="Create BooK api with valid data" finished-at="2025-05-18T22:05:37 EEST" duration-ms="453" status="PASS">
+        <test-method signature="checkUpdateBookAdded_P()[pri:1, instance:testCases.Book.TC03_UpdateBookById@30af7377]" started-at="2025-05-18T22:16:31 EEST" name="checkUpdateBookAdded_P" description="Create BooK api with valid data" finished-at="2025-05-18T22:16:31 EEST" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUpdateBookAdded_P -->
       </class> <!-- testCases.Book.TC03_UpdateBookById -->
       <class name="testCases.Book.TC04_PartialUpdateForBook">
-        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.Book.TC04_PartialUpdateForBook@1dab9dd6]" started-at="2025-05-18T22:05:38 EEST" name="checkPartialUpdate_P" description="check partial update api with valid data" finished-at="2025-05-18T22:05:38 EEST" duration-ms="37" status="PASS">
+        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.Book.TC04_PartialUpdateForBook@67a056f1]" started-at="2025-05-18T22:16:31 EEST" name="checkPartialUpdate_P" description="check partial update api with valid data" finished-at="2025-05-18T22:16:31 EEST" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPartialUpdate_P -->
       </class> <!-- testCases.Book.TC04_PartialUpdateForBook -->
       <class name="testCases.Book.TC05_DeleteBook">
-        <test-method signature="checkDeleteBookById_P()[pri:1, instance:testCases.Book.TC05_DeleteBook@247667dd]" started-at="2025-05-18T22:05:38 EEST" name="checkDeleteBookById_P" description="check delete book by id " finished-at="2025-05-18T22:05:38 EEST" duration-ms="34" status="PASS">
+        <test-method signature="checkDeleteBookById_P()[pri:1, instance:testCases.Book.TC05_DeleteBook@1dab9dd6]" started-at="2025-05-18T22:16:31 EEST" name="checkDeleteBookById_P" description="check delete book by id " finished-at="2025-05-18T22:16:31 EEST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDeleteBookById_P -->
       </class> <!-- testCases.Book.TC05_DeleteBook -->
       <class name="testCases.Book.TC02_GetBook">
-        <test-method signature="checkGetBookById_P()[pri:1, instance:testCases.Book.TC02_GetBook@30af7377]" started-at="2025-05-18T22:05:37 EEST" name="checkGetBookById_P" description="Get Book details API by ID" finished-at="2025-05-18T22:05:37 EEST" depends-on-methods="checkCreateNewBook_P" duration-ms="203" status="PASS">
+        <test-method signature="checkGetBookById_P()[pri:1, instance:testCases.Book.TC02_GetBook@71c905a3]" started-at="2025-05-18T22:16:30 EEST" name="checkGetBookById_P" description="Get Book details API by ID" finished-at="2025-05-18T22:16:31 EEST" depends-on-methods="checkCreateNewBook_P" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetBookById_P -->
-        <test-method signature="checkGetBookByIdAfterUpdate_P()[pri:2, instance:testCases.Book.TC02_GetBook@30af7377]" started-at="2025-05-18T22:05:37 EEST" name="checkGetBookByIdAfterUpdate_P" description="Get Book details API by ID" finished-at="2025-05-18T22:05:38 EEST" depends-on-methods="checkUpdateBookAdded_P" duration-ms="123" status="PASS">
+        <test-method signature="checkGetBookByIdAfterUpdate_P()[pri:2, instance:testCases.Book.TC02_GetBook@71c905a3]" started-at="2025-05-18T22:16:31 EEST" name="checkGetBookByIdAfterUpdate_P" description="Get Book details API by ID" finished-at="2025-05-18T22:16:31 EEST" depends-on-methods="checkUpdateBookAdded_P" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetBookByIdAfterUpdate_P -->
-        <test-method signature="checkRetrieveAllBooks_P()[pri:3, instance:testCases.Book.TC02_GetBook@30af7377]" started-at="2025-05-18T22:05:38 EEST" name="checkRetrieveAllBooks_P" description="Get BooK details api by id" finished-at="2025-05-18T22:05:38 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="230" status="PASS">
+        <test-method signature="checkRetrieveAllBooks_P()[pri:3, instance:testCases.Book.TC02_GetBook@71c905a3]" started-at="2025-05-18T22:16:31 EEST" name="checkRetrieveAllBooks_P" description="Get BooK details api by id" finished-at="2025-05-18T22:16:31 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRetrieveAllBooks_P -->
-        <test-method signature="checkGetBookAfterDelete_P()[pri:4, instance:testCases.Book.TC02_GetBook@30af7377]" started-at="2025-05-18T22:05:38 EEST" name="checkGetBookAfterDelete_P" description="check delete book by id " finished-at="2025-05-18T22:05:38 EEST" depends-on-methods="checkDeleteBookById_P" duration-ms="32" status="PASS">
+        <test-method signature="checkGetBookAfterDelete_P()[pri:4, instance:testCases.Book.TC02_GetBook@71c905a3]" started-at="2025-05-18T22:16:31 EEST" name="checkGetBookAfterDelete_P" description="check delete book by id " finished-at="2025-05-18T22:16:31 EEST" depends-on-methods="checkDeleteBookById_P" duration-ms="22" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetBookAfterDelete_P -->
       </class> <!-- testCases.Book.TC02_GetBook -->
       <class name="testCases.Book.TC01_CreateBook">
-        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.Book.TC01_CreateBook@5d39f2d8]" started-at="2025-05-18T22:05:29 EEST" name="setBaseURL" finished-at="2025-05-18T22:05:31 EEST" duration-ms="1516" status="PASS">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.Book.TC01_CreateBook@19593091]" started-at="2025-05-18T22:16:23 EEST" name="setBaseURL" finished-at="2025-05-18T22:16:24 EEST" duration-ms="1220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseURL -->
-        <test-method signature="checkCreateNewBook_P()[pri:1, instance:testCases.Book.TC01_CreateBook@5d39f2d8]" started-at="2025-05-18T22:05:31 EEST" name="checkCreateNewBook_P" description="Create BooK api with valid data" finished-at="2025-05-18T22:05:37 EEST" duration-ms="5794" status="PASS">
+        <test-method signature="checkCreateNewBook_P()[pri:1, instance:testCases.Book.TC01_CreateBook@19593091]" started-at="2025-05-18T22:16:24 EEST" name="checkCreateNewBook_P" description="Create BooK api with valid data" finished-at="2025-05-18T22:16:30 EEST" duration-ms="5892" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCreateNewBook_P -->
       </class> <!-- testCases.Book.TC01_CreateBook -->
     </test> <!-- E2E Book APIs -->
   </suite> <!-- All Tests for Books -->
-  <suite started-at="2025-05-18T22:05:40 EEST" name="All Tests for WishList" finished-at="2025-05-18T22:05:40 EEST" duration-ms="665">
+  <suite started-at="2025-05-18T22:16:33 EEST" name="All Tests for WishList" finished-at="2025-05-18T22:16:34 EEST" duration-ms="584">
     <groups>
     </groups>
-    <test started-at="2025-05-18T22:05:40 EEST" name="E2E WishList APIs" finished-at="2025-05-18T22:05:40 EEST" duration-ms="665">
+    <test started-at="2025-05-18T22:16:33 EEST" name="E2E WishList APIs" finished-at="2025-05-18T22:16:34 EEST" duration-ms="584">
       <class name="testCases.WishLists.TC04_PartialUpdateForWishList">
-        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.WishLists.TC04_PartialUpdateForWishList@71b0289b]" started-at="2025-05-18T22:05:40 EEST" name="checkPartialUpdate_P" description="check partial update for wishlist api with valid data" finished-at="2025-05-18T22:05:40 EEST" duration-ms="33" status="PASS">
+        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.WishLists.TC04_PartialUpdateForWishList@7ddcb0dc]" started-at="2025-05-18T22:16:33 EEST" name="checkPartialUpdate_P" description="check partial update for wishlist api with valid data" finished-at="2025-05-18T22:16:33 EEST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPartialUpdate_P -->
       </class> <!-- testCases.WishLists.TC04_PartialUpdateForWishList -->
       <class name="testCases.WishLists.TC05_DeleteWishList">
-        <test-method signature="checkDeleteWishListById_P()[pri:1, instance:testCases.WishLists.TC05_DeleteWishList@42cc420b]" started-at="2025-05-18T22:05:40 EEST" name="checkDeleteWishListById_P" description="check delete wishlist by id " finished-at="2025-05-18T22:05:40 EEST" duration-ms="23" status="PASS">
+        <test-method signature="checkDeleteWishListById_P()[pri:1, instance:testCases.WishLists.TC05_DeleteWishList@f5bf288]" started-at="2025-05-18T22:16:34 EEST" name="checkDeleteWishListById_P" description="check delete wishlist by id " finished-at="2025-05-18T22:16:34 EEST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDeleteWishListById_P -->
       </class> <!-- testCases.WishLists.TC05_DeleteWishList -->
       <class name="testCases.WishLists.TC02_GetWishListByID">
-        <test-method signature="checkGetWishListById_P()[pri:1, instance:testCases.WishLists.TC02_GetWishListByID@70f4abc1]" started-at="2025-05-18T22:05:40 EEST" name="checkGetWishListById_P" description="Get wishlist details by ID" finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkCreateNewWishList_P" duration-ms="84" status="PASS">
+        <test-method signature="checkGetWishListById_P()[pri:1, instance:testCases.WishLists.TC02_GetWishListByID@482c351d]" started-at="2025-05-18T22:16:33 EEST" name="checkGetWishListById_P" description="Get wishlist details by ID" finished-at="2025-05-18T22:16:33 EEST" depends-on-methods="checkCreateNewWishList_P" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetWishListById_P -->
-        <test-method signature="checkGetWishListAfterUpdate_P()[pri:2, instance:testCases.WishLists.TC02_GetWishListByID@70f4abc1]" started-at="2025-05-18T22:05:40 EEST" name="checkGetWishListAfterUpdate_P" description="Get wishlist details after update" finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkUpdateWishListAdded_P" duration-ms="83" status="PASS">
+        <test-method signature="checkGetWishListAfterUpdate_P()[pri:2, instance:testCases.WishLists.TC02_GetWishListByID@482c351d]" started-at="2025-05-18T22:16:33 EEST" name="checkGetWishListAfterUpdate_P" description="Get wishlist details after update" finished-at="2025-05-18T22:16:33 EEST" depends-on-methods="checkUpdateWishListAdded_P" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetWishListAfterUpdate_P -->
-        <test-method signature="checkRetrieveAllWishList_P()[pri:3, instance:testCases.WishLists.TC02_GetWishListByID@70f4abc1]" started-at="2025-05-18T22:05:40 EEST" name="checkRetrieveAllWishList_P" description="Get wishlist details api by id" finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="42" status="PASS">
+        <test-method signature="checkRetrieveAllWishList_P()[pri:3, instance:testCases.WishLists.TC02_GetWishListByID@482c351d]" started-at="2025-05-18T22:16:33 EEST" name="checkRetrieveAllWishList_P" description="Get wishlist details api by id" finished-at="2025-05-18T22:16:34 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRetrieveAllWishList_P -->
-        <test-method signature="checkGetWishListAfterDelete_P()[pri:4, instance:testCases.WishLists.TC02_GetWishListByID@70f4abc1]" started-at="2025-05-18T22:05:40 EEST" name="checkGetWishListAfterDelete_P" description="check delete wishlist by id " finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkDeleteWishListById_P" duration-ms="26" status="PASS">
+        <test-method signature="checkGetWishListAfterDelete_P()[pri:4, instance:testCases.WishLists.TC02_GetWishListByID@482c351d]" started-at="2025-05-18T22:16:34 EEST" name="checkGetWishListAfterDelete_P" description="check delete wishlist by id " finished-at="2025-05-18T22:16:34 EEST" depends-on-methods="checkDeleteWishListById_P" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetWishListAfterDelete_P -->
       </class> <!-- testCases.WishLists.TC02_GetWishListByID -->
       <class name="testCases.WishLists.TC01_CreateWishList">
-        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.WishLists.TC01_CreateWishList@78eafad]" started-at="2025-05-18T22:05:40 EEST" name="setBaseURL" finished-at="2025-05-18T22:05:40 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.WishLists.TC01_CreateWishList@58b311ba]" started-at="2025-05-18T22:16:33 EEST" name="setBaseURL" finished-at="2025-05-18T22:16:33 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseURL -->
-        <test-method signature="checkCreateNewWishList_P()[pri:1, instance:testCases.WishLists.TC01_CreateWishList@78eafad]" started-at="2025-05-18T22:05:40 EEST" name="checkCreateNewWishList_P" description="Create wishlist api with valid data" finished-at="2025-05-18T22:05:40 EEST" duration-ms="175" status="PASS">
+        <test-method signature="checkCreateNewWishList_P()[pri:1, instance:testCases.WishLists.TC01_CreateWishList@58b311ba]" started-at="2025-05-18T22:16:33 EEST" name="checkCreateNewWishList_P" description="Create wishlist api with valid data" finished-at="2025-05-18T22:16:33 EEST" duration-ms="170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCreateNewWishList_P -->
       </class> <!-- testCases.WishLists.TC01_CreateWishList -->
       <class name="testCases.WishLists.TC03_UpdateWishListById">
-        <test-method signature="checkUpdateWishListAdded_P()[pri:1, instance:testCases.WishLists.TC03_UpdateWishListById@6f2d3391]" started-at="2025-05-18T22:05:40 EEST" name="checkUpdateWishListAdded_P" description="Create wishlist api with valid data" finished-at="2025-05-18T22:05:40 EEST" duration-ms="168" status="PASS">
+        <test-method signature="checkUpdateWishListAdded_P()[pri:1, instance:testCases.WishLists.TC03_UpdateWishListById@4c38cd16]" started-at="2025-05-18T22:16:33 EEST" name="checkUpdateWishListAdded_P" description="Create wishlist api with valid data" finished-at="2025-05-18T22:16:33 EEST" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUpdateWishListAdded_P -->
       </class> <!-- testCases.WishLists.TC03_UpdateWishListById -->
     </test> <!-- E2E WishList APIs -->
   </suite> <!-- All Tests for WishList -->
-  <suite started-at="2025-05-18T22:05:41 EEST" name="All Test Suite" finished-at="2025-05-18T22:05:41 EEST" duration-ms="0">
+  <suite started-at="2025-05-18T22:16:34 EEST" name="All Test Suite" finished-at="2025-05-18T22:16:34 EEST" duration-ms="0">
     <groups>
     </groups>
   </suite> <!-- All Test Suite -->
-  <suite started-at="2025-05-18T22:05:39 EEST" name="All Tests for User" finished-at="2025-05-18T22:05:40 EEST" duration-ms="862">
+  <suite started-at="2025-05-18T22:16:32 EEST" name="All Tests for User" finished-at="2025-05-18T22:16:33 EEST" duration-ms="935">
     <groups>
     </groups>
-    <test started-at="2025-05-18T22:05:39 EEST" name="E2E User APIs" finished-at="2025-05-18T22:05:40 EEST" duration-ms="862">
+    <test started-at="2025-05-18T22:16:32 EEST" name="E2E User APIs" finished-at="2025-05-18T22:16:33 EEST" duration-ms="935">
       <class name="testCases.Users.TC05_DeleteUser">
-        <test-method signature="checkDeleteUserById_P()[pri:1, instance:testCases.Users.TC05_DeleteUser@37c36608]" started-at="2025-05-18T22:05:40 EEST" name="checkDeleteUserById_P" description="check delete user by id " finished-at="2025-05-18T22:05:40 EEST" duration-ms="20" status="PASS">
+        <test-method signature="checkDeleteUserById_P()[pri:1, instance:testCases.Users.TC05_DeleteUser@6fca2a8f]" started-at="2025-05-18T22:16:33 EEST" name="checkDeleteUserById_P" description="check delete user by id " finished-at="2025-05-18T22:16:33 EEST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDeleteUserById_P -->
       </class> <!-- testCases.Users.TC05_DeleteUser -->
       <class name="testCases.Users.TC04_PartialUpdateForUser">
-        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.Users.TC04_PartialUpdateForUser@2e869098]" started-at="2025-05-18T22:05:40 EEST" name="checkPartialUpdate_P" description="check partial update for user api with valid data" finished-at="2025-05-18T22:05:40 EEST" duration-ms="32" status="PASS">
+        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.Users.TC04_PartialUpdateForUser@d1a10ac]" started-at="2025-05-18T22:16:33 EEST" name="checkPartialUpdate_P" description="check partial update for user api with valid data" finished-at="2025-05-18T22:16:33 EEST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPartialUpdate_P -->
       </class> <!-- testCases.Users.TC04_PartialUpdateForUser -->
       <class name="testCases.Users.TC02_GetUser">
-        <test-method signature="checkGetUserById_P()[pri:1, instance:testCases.Users.TC02_GetUser@6f70a21b]" started-at="2025-05-18T22:05:39 EEST" name="checkGetUserById_P" description="Get user details API by ID" finished-at="2025-05-18T22:05:39 EEST" depends-on-methods="checkCreateNewUser_P" duration-ms="123" status="PASS">
+        <test-method signature="checkGetUserById_P()[pri:1, instance:testCases.Users.TC02_GetUser@75b3673]" started-at="2025-05-18T22:16:32 EEST" name="checkGetUserById_P" description="Get user details API by ID" finished-at="2025-05-18T22:16:32 EEST" depends-on-methods="checkCreateNewUser_P" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetUserById_P -->
-        <test-method signature="checkGetUserAfterUpdate_P()[pri:2, instance:testCases.Users.TC02_GetUser@6f70a21b]" started-at="2025-05-18T22:05:39 EEST" name="checkGetUserAfterUpdate_P" description="Get user details API after update" finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkUpdateUserAdded_P" duration-ms="110" status="PASS">
+        <test-method signature="checkGetUserAfterUpdate_P()[pri:2, instance:testCases.Users.TC02_GetUser@75b3673]" started-at="2025-05-18T22:16:33 EEST" name="checkGetUserAfterUpdate_P" description="Get user details API after update" finished-at="2025-05-18T22:16:33 EEST" depends-on-methods="checkUpdateUserAdded_P" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetUserAfterUpdate_P -->
-        <test-method signature="checkRetrieveAllUsers_P()[pri:3, instance:testCases.Users.TC02_GetUser@6f70a21b]" started-at="2025-05-18T22:05:40 EEST" name="checkRetrieveAllUsers_P" description="Get user details api by id" finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="52" status="PASS">
+        <test-method signature="checkRetrieveAllUsers_P()[pri:3, instance:testCases.Users.TC02_GetUser@75b3673]" started-at="2025-05-18T22:16:33 EEST" name="checkRetrieveAllUsers_P" description="Get user details api by id" finished-at="2025-05-18T22:16:33 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRetrieveAllUsers_P -->
-        <test-method signature="checkGetUserAfterDelete_P()[pri:4, instance:testCases.Users.TC02_GetUser@6f70a21b]" started-at="2025-05-18T22:05:40 EEST" name="checkGetUserAfterDelete_P" description="check delete user by id " finished-at="2025-05-18T22:05:40 EEST" depends-on-methods="checkDeleteUserById_P" duration-ms="21" status="PASS">
+        <test-method signature="checkGetUserAfterDelete_P()[pri:4, instance:testCases.Users.TC02_GetUser@75b3673]" started-at="2025-05-18T22:16:33 EEST" name="checkGetUserAfterDelete_P" description="check delete user by id " finished-at="2025-05-18T22:16:33 EEST" depends-on-methods="checkDeleteUserById_P" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetUserAfterDelete_P -->
       </class> <!-- testCases.Users.TC02_GetUser -->
       <class name="testCases.Users.TC01_CreateUser">
-        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.Users.TC01_CreateUser@27e7c77f]" started-at="2025-05-18T22:05:39 EEST" name="setBaseURL" finished-at="2025-05-18T22:05:39 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.Users.TC01_CreateUser@303a5119]" started-at="2025-05-18T22:16:32 EEST" name="setBaseURL" finished-at="2025-05-18T22:16:32 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseURL -->
-        <test-method signature="checkCreateNewUser_P()[pri:1, instance:testCases.Users.TC01_CreateUser@27e7c77f]" started-at="2025-05-18T22:05:39 EEST" name="checkCreateNewUser_P" description="Create user api with valid data" finished-at="2025-05-18T22:05:39 EEST" duration-ms="297" status="PASS">
+        <test-method signature="checkCreateNewUser_P()[pri:1, instance:testCases.Users.TC01_CreateUser@303a5119]" started-at="2025-05-18T22:16:32 EEST" name="checkCreateNewUser_P" description="Create user api with valid data" finished-at="2025-05-18T22:16:32 EEST" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCreateNewUser_P -->
       </class> <!-- testCases.Users.TC01_CreateUser -->
       <class name="testCases.Users.TC03_UpdateUserById">
-        <test-method signature="checkUpdateUserAdded_P()[pri:1, instance:testCases.Users.TC03_UpdateUserById@6ae62c7e]" started-at="2025-05-18T22:05:39 EEST" name="checkUpdateUserAdded_P" description="Create user api with valid data" finished-at="2025-05-18T22:05:39 EEST" duration-ms="180" status="PASS">
+        <test-method signature="checkUpdateUserAdded_P()[pri:1, instance:testCases.Users.TC03_UpdateUserById@1bcb79c2]" started-at="2025-05-18T22:16:32 EEST" name="checkUpdateUserAdded_P" description="Create user api with valid data" finished-at="2025-05-18T22:16:33 EEST" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUpdateUserAdded_P -->
       </class> <!-- testCases.Users.TC03_UpdateUserById -->
     </test> <!-- E2E User APIs -->
   </suite> <!-- All Tests for User -->
-  <suite started-at="2025-05-18T22:05:38 EEST" name="All Tests for HouseHold" finished-at="2025-05-18T22:05:39 EEST" duration-ms="613">
+  <suite started-at="2025-05-18T22:16:31 EEST" name="All Tests for HouseHold" finished-at="2025-05-18T22:16:32 EEST" duration-ms="562">
     <groups>
     </groups>
-    <test started-at="2025-05-18T22:05:38 EEST" name="E2E HouseHold APIs" finished-at="2025-05-18T22:05:39 EEST" duration-ms="613">
+    <test started-at="2025-05-18T22:16:31 EEST" name="E2E HouseHold APIs" finished-at="2025-05-18T22:16:32 EEST" duration-ms="562">
       <class name="testCases.HouseHolds.TC05_DeleteHouseHold">
-        <test-method signature="checkDeleteHouseHoldById_P()[pri:1, instance:testCases.HouseHolds.TC05_DeleteHouseHold@3078cac]" started-at="2025-05-18T22:05:39 EEST" name="checkDeleteHouseHoldById_P" description="check delete houseHold by id " finished-at="2025-05-18T22:05:39 EEST" duration-ms="29" status="PASS">
+        <test-method signature="checkDeleteHouseHoldById_P()[pri:1, instance:testCases.HouseHolds.TC05_DeleteHouseHold@368d5c00]" started-at="2025-05-18T22:16:32 EEST" name="checkDeleteHouseHoldById_P" description="check delete houseHold by id " finished-at="2025-05-18T22:16:32 EEST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDeleteHouseHoldById_P -->
       </class> <!-- testCases.HouseHolds.TC05_DeleteHouseHold -->
       <class name="testCases.HouseHolds.TC02_GetHouseHold">
-        <test-method signature="checkGetHouseHoldById_P()[pri:1, instance:testCases.HouseHolds.TC02_GetHouseHold@6d5c2745]" started-at="2025-05-18T22:05:38 EEST" name="checkGetHouseHoldById_P" description="Get household details after create" finished-at="2025-05-18T22:05:38 EEST" depends-on-methods="checkCreateNewHouseHold_P" duration-ms="70" status="PASS">
+        <test-method signature="checkGetHouseHoldById_P()[pri:1, instance:testCases.HouseHolds.TC02_GetHouseHold@6dd93a21]" started-at="2025-05-18T22:16:32 EEST" name="checkGetHouseHoldById_P" description="Get household details after create" finished-at="2025-05-18T22:16:32 EEST" depends-on-methods="checkCreateNewHouseHold_P" duration-ms="72" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetHouseHoldById_P -->
-        <test-method signature="checkGetHouseHoldAfterUpdate_P()[pri:2, instance:testCases.HouseHolds.TC02_GetHouseHold@6d5c2745]" started-at="2025-05-18T22:05:39 EEST" name="checkGetHouseHoldAfterUpdate_P" description="Get household details after update " finished-at="2025-05-18T22:05:39 EEST" depends-on-methods="checkUpdateHouseHoldAdded_P" duration-ms="61" status="PASS">
+        <test-method signature="checkGetHouseHoldAfterUpdate_P()[pri:2, instance:testCases.HouseHolds.TC02_GetHouseHold@6dd93a21]" started-at="2025-05-18T22:16:32 EEST" name="checkGetHouseHoldAfterUpdate_P" description="Get household details after update " finished-at="2025-05-18T22:16:32 EEST" depends-on-methods="checkUpdateHouseHoldAdded_P" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetHouseHoldAfterUpdate_P -->
-        <test-method signature="checkRetrieveAllHouseHold_P()[pri:3, instance:testCases.HouseHolds.TC02_GetHouseHold@6d5c2745]" started-at="2025-05-18T22:05:39 EEST" name="checkRetrieveAllHouseHold_P" description="Get household details api by id" finished-at="2025-05-18T22:05:39 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="39" status="PASS">
+        <test-method signature="checkRetrieveAllHouseHold_P()[pri:3, instance:testCases.HouseHolds.TC02_GetHouseHold@6dd93a21]" started-at="2025-05-18T22:16:32 EEST" name="checkRetrieveAllHouseHold_P" description="Get household details api by id" finished-at="2025-05-18T22:16:32 EEST" depends-on-methods="checkPartialUpdate_P" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRetrieveAllHouseHold_P -->
-        <test-method signature="checkGetHouseHoldAfterDelete_P()[pri:4, instance:testCases.HouseHolds.TC02_GetHouseHold@6d5c2745]" started-at="2025-05-18T22:05:39 EEST" name="checkGetHouseHoldAfterDelete_P" description="check delete household by id " finished-at="2025-05-18T22:05:39 EEST" depends-on-methods="checkDeleteHouseHoldById_P" duration-ms="28" status="PASS">
+        <test-method signature="checkGetHouseHoldAfterDelete_P()[pri:4, instance:testCases.HouseHolds.TC02_GetHouseHold@6dd93a21]" started-at="2025-05-18T22:16:32 EEST" name="checkGetHouseHoldAfterDelete_P" description="check delete household by id " finished-at="2025-05-18T22:16:32 EEST" depends-on-methods="checkDeleteHouseHoldById_P" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkGetHouseHoldAfterDelete_P -->
       </class> <!-- testCases.HouseHolds.TC02_GetHouseHold -->
       <class name="testCases.HouseHolds.TC01_CreateHouseHold">
-        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.HouseHolds.TC01_CreateHouseHold@57f9b467]" started-at="2025-05-18T22:05:38 EEST" name="setBaseURL" finished-at="2025-05-18T22:05:38 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:testCases.HouseHolds.TC01_CreateHouseHold@77ee25f1]" started-at="2025-05-18T22:16:31 EEST" name="setBaseURL" finished-at="2025-05-18T22:16:31 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseURL -->
-        <test-method signature="checkCreateNewHouseHold_P()[pri:1, instance:testCases.HouseHolds.TC01_CreateHouseHold@57f9b467]" started-at="2025-05-18T22:05:38 EEST" name="checkCreateNewHouseHold_P" description="Create new household with valid data" finished-at="2025-05-18T22:05:38 EEST" duration-ms="158" status="PASS">
+        <test-method signature="checkCreateNewHouseHold_P()[pri:1, instance:testCases.HouseHolds.TC01_CreateHouseHold@77ee25f1]" started-at="2025-05-18T22:16:31 EEST" name="checkCreateNewHouseHold_P" description="Create new household with valid data" finished-at="2025-05-18T22:16:32 EEST" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCreateNewHouseHold_P -->
       </class> <!-- testCases.HouseHolds.TC01_CreateHouseHold -->
       <class name="testCases.HouseHolds.TC04_PartialUpdateHouseHold">
-        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.HouseHolds.TC04_PartialUpdateHouseHold@1947596f]" started-at="2025-05-18T22:05:39 EEST" name="checkPartialUpdate_P" description="check partial update api with valid data" finished-at="2025-05-18T22:05:39 EEST" duration-ms="36" status="PASS">
+        <test-method signature="checkPartialUpdate_P()[pri:1, instance:testCases.HouseHolds.TC04_PartialUpdateHouseHold@304a3655]" started-at="2025-05-18T22:16:32 EEST" name="checkPartialUpdate_P" description="check partial update api with valid data" finished-at="2025-05-18T22:16:32 EEST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPartialUpdate_P -->
       </class> <!-- testCases.HouseHolds.TC04_PartialUpdateHouseHold -->
       <class name="testCases.HouseHolds.TC03_UpdateHouseHold">
-        <test-method signature="checkUpdateHouseHoldAdded_P()[pri:1, instance:testCases.HouseHolds.TC03_UpdateHouseHold@44b29496]" started-at="2025-05-18T22:05:38 EEST" name="checkUpdateHouseHoldAdded_P" description="Update household api with valid data" finished-at="2025-05-18T22:05:39 EEST" duration-ms="146" status="PASS">
+        <test-method signature="checkUpdateHouseHoldAdded_P()[pri:1, instance:testCases.HouseHolds.TC03_UpdateHouseHold@57b9e423]" started-at="2025-05-18T22:16:32 EEST" name="checkUpdateHouseHoldAdded_P" description="Update household api with valid data" finished-at="2025-05-18T22:16:32 EEST" duration-ms="130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUpdateHouseHoldAdded_P -->

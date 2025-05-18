@@ -1,11 +1,13 @@
 package testCases;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
+import io.qameta.allure.testng.AllureTestNg;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 
-@Listeners(ChainTestListener.class)
+//@Listeners(ChainTestListener.class)
+@Listeners({AllureTestNg.class})
 public class TestBase {
 
     public static int bookID,householdID, userID,staticWishListID;
